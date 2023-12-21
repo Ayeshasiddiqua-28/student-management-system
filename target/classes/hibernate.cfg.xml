@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+	   <!--DB Configuaration -->
+	<property name="connection.Driver = class">com.mysql.cj.jdbc.Driver</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/sms</property>
+	<property name="connection.user">root</property>
+	<property name="connection.password">root123</property>
+	
+	   <!-- Dialect Configuaration -->
+	<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+	
+	<property name="hbm2ddl.auto">create</property>
+	<property name="hbm2ddl.auto">update</property> 
+	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+	<!-- Mapping config -->
+	<mapping class="studentHibernetProject.StudentManagementSytem.Student"/>
+	</session-factory>
+	
+</hibernate-configuration>
